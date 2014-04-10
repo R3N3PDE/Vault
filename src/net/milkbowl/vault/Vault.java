@@ -44,6 +44,7 @@ import net.milkbowl.vault.economy.plugins.Economy_3co;
 import net.milkbowl.vault.economy.plugins.Economy_AEco;
 import net.milkbowl.vault.economy.plugins.Economy_BOSE6;
 import net.milkbowl.vault.economy.plugins.Economy_BOSE7;
+import net.milkbowl.vault.economy.plugins.Economy_BattleCraftCore;
 import net.milkbowl.vault.economy.plugins.Economy_CommandsEX;
 import net.milkbowl.vault.economy.plugins.Economy_Craftconomy;
 import net.milkbowl.vault.economy.plugins.Economy_Craftconomy3;
@@ -257,6 +258,9 @@ public class Vault extends JavaPlugin {
     private void loadEconomy() {
         // Try to load MiConomy
         hookEconomy("MiConomy", Economy_MiConomy.class, ServicePriority.Normal, "com.gmail.bleedobsidian.miconomy.Main");
+        
+        //Try to load BattleCraftCore
+        hookEconomy("BattleCraftCore", Economy_BattleCraftCore.class, ServicePriority.Normal, "de.CodingDev.BattleCraftCore.BattleCraftCore");
 
         // Try to load MiFaConomy
         hookEconomy("MineFaConomy", Economy_Minefaconomy.class, ServicePriority.Normal, "me.coniin.plugins.minefaconomy.Minefaconomy");
